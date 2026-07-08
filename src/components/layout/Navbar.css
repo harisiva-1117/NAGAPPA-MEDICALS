@@ -1,0 +1,373 @@
+/* ========================================
+   NAVBAR 2.0 - NAGAPPA MEDICALS
+======================================== */
+
+.navbar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 999;
+
+    padding: 18px 0;
+
+    transition: all .35s ease;
+
+    background: transparent;
+
+}
+
+.navbar-scrolled {
+
+    background: rgba(255,255,255,.92);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.navbar-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+/* ===========================
+        LOGO
+=========================== */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+}
+
+.brand-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #ff9a1f,
+        #f57c00
+    );
+
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:0 10px 25px rgba(245,124,0,.35);
+}
+
+.brand h2{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:white;
+
+    transition:.35s;
+}
+
+.brand span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#ffe7cf;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+}
+
+.navbar-scrolled .brand h2{
+
+    color:#222;
+}
+
+.navbar-scrolled .brand span{
+
+    color:#666;
+}
+
+/* ===========================
+      NAVIGATION
+=========================== */
+
+.navigation{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+}
+
+.navigation a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:white;
+
+    transition:.35s;
+}
+
+.navbar-scrolled .navigation a{
+
+    color:#222;
+}
+
+/* underline animation */
+
+.navigation a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:#F57C00;
+
+    border-radius:50px;
+
+    transition:.35s;
+}
+
+.navigation a:hover::after{
+
+    width:100%;
+}
+
+.navigation a:hover{
+
+    color:#F57C00;
+}
+
+.navigation .active{
+
+    color:#F57C00 !important;
+}
+
+.navigation .active::after{
+
+    width:100%;
+}
+/* ========================================
+      CTA BUTTON
+======================================== */
+
+.enquiry-button{
+
+    background: linear-gradient(
+        135deg,
+        #FF9800,
+        #F57C00
+    );
+
+    color:#fff !important;
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    box-shadow:0 15px 30px rgba(245,124,0,.25);
+
+    transition:all .35s ease;
+}
+
+.enquiry-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 35px rgba(245,124,0,.35);
+}
+
+.enquiry-button::after{
+
+    display:none;
+}
+
+/* ========================================
+        MOBILE MENU BUTTON
+======================================== */
+
+.menu-button{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    transition:.3s;
+}
+
+.navbar-scrolled .menu-button{
+
+    color:#222;
+}
+
+.menu-button:hover{
+
+    color:#F57C00;
+}
+
+/* ========================================
+      RESPONSIVE
+======================================== */
+
+@media(max-width:992px){
+
+.menu-button{
+
+    display:block;
+}
+
+.navigation{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:320px;
+
+    height:100vh;
+
+    background:#fff;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    transition:.4s ease;
+
+    box-shadow:-15px 0 40px rgba(0,0,0,.08);
+}
+
+.navigation.active{
+
+    right:0;
+}
+
+.navigation a{
+
+    color:#222 !important;
+
+    font-size:18px;
+}
+
+.brand h2{
+
+    font-size:21px;
+}
+
+.brand span{
+
+    font-size:12px;
+}
+
+}
+
+/* ========================================
+      SMALL DEVICES
+======================================== */
+
+@media(max-width:576px){
+
+.navbar{
+
+    padding:15px 0;
+}
+
+.brand-icon{
+
+    width:46px;
+
+    height:46px;
+
+    font-size:20px;
+}
+
+.brand h2{
+
+    font-size:18px;
+}
+
+.brand span{
+
+    font-size:11px;
+}
+
+.navigation{
+
+    width:100%;
+}
+
+.enquiry-button{
+
+    width:220px;
+
+    text-align:center;
+}
+
+}

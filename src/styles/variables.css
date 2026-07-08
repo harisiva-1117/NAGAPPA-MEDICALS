@@ -5,4 +5,30 @@
   --dark: #333333;
   --gray: #6C757D;
   --light: #F8F9FA;
+}:root{
+
+    /* Brand Colors */
+
+    --primary:#F57C00;
+    --primary-light:#FFF3E0;
+    --primary-dark:#E65100;
+
+    /* Neutral Colors */
+
+    --white:#FFFFFF;
+    --black:#1F2937;
+    --gray:#6B7280;
+    --light:#F8F9FA;
+
+    /* Shadow */
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    /* Radius */
+
+    --radius:14px;
+
+    /* Transition */
+
+    --transition:.35s ease;
 }
