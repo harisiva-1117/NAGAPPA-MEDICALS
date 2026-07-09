@@ -1,13 +1,22 @@
-import Layout from "../components/layout/Layout";
-import Hero from "../components/ui/Hero";
-import AboutPreview from "../components/ui/AboutPreview";
+import Navbar from "../components/layout/Navbar";
+import Hero from "../components/home/Hero";
+import About from "../components/home/About";
+import Services from "../components/home/Services";
+import HealthProducts from "../components/home/HealthProducts";
+import Contact from "../components/home/Contact";
+import Footer from "../components/layout/Footer";
 
 function Home() {
   return (
-    <Layout>
+    <>
+      <Navbar />
       <Hero />
-      <AboutPreview />
-    </Layout>
+      <About />
+      <Services />
+      <HealthProducts />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 

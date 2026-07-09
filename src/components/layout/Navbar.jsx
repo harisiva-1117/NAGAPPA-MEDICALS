@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { FaClinicMedical, FaBars, FaTimes } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,54 +20,75 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+    <header className={scrolled ? "navbar scrolled" : "navbar"}>
+      <div className="navbar-container">
 
-      <div className="container navbar-wrapper">
+        {/* Logo */}
 
-        <NavLink
-          to="/"
-          className="brand"
-          onClick={closeMenu}
-        >
-          <FaClinicMedical className="brand-icon" />
-
-          <div>
-            <h2>Nagappa Medicals</h2>
-            <span>Trusted Healthcare</span>
+        <Link to="/" className="logo" onClick={closeMenu}>
+          <div className="logo-icon">
+            <span>+</span>
           </div>
-        </NavLink>
 
-        <nav className={menuOpen ? "navigation active" : "navigation"}>
+          <div className="logo-text">
+            <h2>Nagappa Medicals</h2>
+            <p>Trusted Healthcare Since 1998</p>
+          </div>
+        </Link>
 
-          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+        {/* Desktop Menu */}
 
-          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+        <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
 
-          <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
 
-          <NavLink to="/health-products" onClick={closeMenu}>Products</NavLink>
+          <Link to="/about" onClick={closeMenu}>
+            About
+          </Link>
 
-          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+          <Link to="/services" onClick={closeMenu}>
+            Services
+          </Link>
 
-          <NavLink
+          <Link to="/health-products" onClick={closeMenu}>
+            Products
+          </Link>
+
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
+
+          <Link
             to="/medicine-enquiry"
-            className="enquiry-button"
+            className="enquiry-btn mobile-btn"
             onClick={closeMenu}
           >
             Medicine Enquiry
-          </NavLink>
+          </Link>
 
         </nav>
 
+        {/* Desktop Button */}
+
+        <Link
+          to="/medicine-enquiry"
+          className="enquiry-btn desktop-btn"
+        >
+          Medicine Enquiry
+        </Link>
+
+        {/* Mobile Toggle */}
+
         <button
-          className="menu-button"
+          className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
       </div>
-
     </header>
   );
 }

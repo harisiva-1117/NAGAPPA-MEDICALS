@@ -1,34 +1,51 @@
 :root {
-  --primary: #F57C00;
-  --primary-light: #FFF3E0;
-  --white: #FFFFFF;
-  --dark: #333333;
-  --gray: #6C757D;
-  --light: #F8F9FA;
-}:root{
 
-    /* Brand Colors */
+  /* Primary Colors */
 
-    --primary:#F57C00;
-    --primary-light:#FFF3E0;
-    --primary-dark:#E65100;
+  --primary: #ff8c00;
+  --primary-dark: #ff7600;
+  --primary-light: #fff4e8;
 
-    /* Neutral Colors */
+  /* Secondary Colors */
 
-    --white:#FFFFFF;
-    --black:#1F2937;
-    --gray:#6B7280;
-    --light:#F8F9FA;
+  --secondary: #0f172a;
+  --secondary-light: #1e293b;
 
-    /* Shadow */
+  /* Background Colors */
 
-    --shadow:0 10px 30px rgba(0,0,0,.08);
+  --white: #ffffff;
+  --light: #f8fafc;
+  --light-gray: #eef2f7;
 
-    /* Radius */
+  /* Text Colors */
 
-    --radius:14px;
+  --text-dark: #222222;
+  --text: #555555;
+  --text-light: #777777;
 
-    /* Transition */
+  /* Border */
 
-    --transition:.35s ease;
+  --border: #e5e7eb;
+
+  /* Shadow */
+
+  --shadow-sm: 0 8px 20px rgba(0,0,0,.06);
+  --shadow-md: 0 15px 35px rgba(0,0,0,.08);
+  --shadow-lg: 0 25px 60px rgba(0,0,0,.12);
+
+  /* Radius */
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-full: 999px;
+
+  /* Transition */
+
+  --transition: all .35s ease;
+
+  /* Width */
+
+  --container: 1400px;
+
 }

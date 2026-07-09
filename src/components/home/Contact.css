@@ -1,0 +1,151 @@
+.contact {
+  padding: 100px 8%;
+  background: #f8fafc;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 10px 22px;
+  background: rgba(255, 140, 0, 0.12);
+  color: #ff8c00;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-left h2 {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.contact-left h2 span {
+  color: #ff8c00;
+}
+
+.contact-left p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-item svg {
+  width: 55px;
+  height: 55px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255, 140, 0, 0.12);
+  color: #ff8c00;
+  font-size: 1.2rem;
+}
+
+.contact-item h4 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #666;
+  line-height: 1.7;
+}
+
+.contact-form {
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff8c00;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 50px;
+  background: #ff8c00;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact-form button:hover {
+  background: #ff7600;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+
+  .contact-item {
+    text-align: left;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 80px 25px;
+  }
+
+  .contact-left h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-form {
+    padding: 30px;
+  }
+
+}
