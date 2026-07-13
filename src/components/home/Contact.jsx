@@ -9,7 +9,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
 
       <div className="contact-container">
 
@@ -55,7 +55,7 @@ function Contact() {
               <FaPhoneAlt />
               <div>
                 <h4>Phone</h4>
-                <p>+91 XXXXX XXXXX</p>
+                <p>+91 98413 26485</p>
               </div>
             </div>
 

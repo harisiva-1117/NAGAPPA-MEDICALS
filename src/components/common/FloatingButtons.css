@@ -1,0 +1,50 @@
+.floating-call,
+.floating-whatsapp {
+  position: fixed;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transition: all 0.35s ease;
+  z-index: 999;
+}
+
+.floating-call {
+  bottom: 110px;
+  background: #ff8c00;
+}
+
+.floating-whatsapp {
+  bottom: 35px;
+  background: #25d366;
+}
+
+.floating-call:hover,
+.floating-whatsapp:hover {
+  transform: scale(1.12);
+}
+
+@media (max-width: 768px) {
+  .floating-call,
+  .floating-whatsapp {
+    width: 55px;
+    height: 55px;
+    right: 18px;
+    font-size: 1.35rem;
+  }
+
+  .floating-call {
+    bottom: 95px;
+  }
+
+  .floating-whatsapp {
+    bottom: 25px;
+  }
+}

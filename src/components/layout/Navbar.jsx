@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,20 +23,20 @@ function Navbar() {
     <header className={scrolled ? "navbar scrolled" : "navbar"}>
       <div className="navbar-container">
 
-        {/* Logo */}
-
-        <Link to="/" className="logo" onClick={closeMenu}>
+        <Link
+          to="/"
+          className="logo"
+          onClick={closeMenu}
+        >
           <div className="logo-icon">
-            <span>+</span>
+            +
           </div>
 
           <div className="logo-text">
             <h2>Nagappa Medicals</h2>
-            <p>Trusted Healthcare Since 1998</p>
+            <p>Trusted Healthcare Partner</p>
           </div>
         </Link>
-
-        {/* Desktop Menu */}
 
         <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
 
@@ -44,21 +44,21 @@ function Navbar() {
             Home
           </Link>
 
-          <Link to="/about" onClick={closeMenu}>
+          <a href="#about" onClick={closeMenu}>
             About
-          </Link>
+          </a>
 
-          <Link to="/services" onClick={closeMenu}>
+          <a href="#services" onClick={closeMenu}>
             Services
-          </Link>
+          </a>
 
-          <Link to="/health-products" onClick={closeMenu}>
+          <a href="#products" onClick={closeMenu}>
             Products
-          </Link>
+          </a>
 
-          <Link to="/contact" onClick={closeMenu}>
+          <a href="#contact" onClick={closeMenu}>
             Contact
-          </Link>
+          </a>
 
           <Link
             to="/medicine-enquiry"
@@ -70,16 +70,12 @@ function Navbar() {
 
         </nav>
 
-        {/* Desktop Button */}
-
         <Link
           to="/medicine-enquiry"
           className="enquiry-btn desktop-btn"
         >
           Medicine Enquiry
         </Link>
-
-        {/* Mobile Toggle */}
 
         <button
           className="menu-toggle"

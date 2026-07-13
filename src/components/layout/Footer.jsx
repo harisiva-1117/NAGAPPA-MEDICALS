@@ -72,7 +72,7 @@ function Footer() {
 
           <div className="footer-item">
             <FaPhoneAlt />
-            <span>+91 XXXXX XXXXX</span>
+            <span>+91 98413 26485</span>
           </div>
 
           <div className="footer-item">

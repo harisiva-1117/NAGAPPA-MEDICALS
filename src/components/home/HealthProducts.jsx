@@ -50,7 +50,7 @@ const products = [
 
 function HealthProducts() {
   return (
-    <section className="products">
+    <section className="products" id="products">
 
       <div className="products-container">
 
